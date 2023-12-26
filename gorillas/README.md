@@ -1,6 +1,12 @@
 # Gorillas Game Project
 
-![Gorillas Game Screenshot](https://github.com/soso0024/cpp-assignment/blob/main/gorillas/images/01.png)
+<!-- ![Gorillas Game Screenshot](https://github.com/soso0024/cpp-assignment/blob/main/gorillas/images/01.png) -->
+
+<p align="center">
+  <img src="https://github.com/soso0024/cpp-assignment/blob/main/gorillas/images/01.png" alt="gorillas image 01" width="400"/>
+  <img src="https://github.com/soso0024/cpp-assignment/blob/main/gorillas/images/02.png" alt="gorillas image 02" width="400"/>
+</p>
+
 
 ## Description
 This project implements a game named "Gorillas" in C++. It features a class `GorillaAI` that uses PID control for AI behavior within the game. The game likely involves strategic elements controlled by AI, making use of proportional, integral, and derivative controls to influence gameplay.
