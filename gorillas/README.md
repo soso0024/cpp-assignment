@@ -1,9 +1,14 @@
 # Gorillas Game Project
 
+![Gorillas Game Screenshot](https://github.com/soso0024/cpp-assignment/blob/main/gorillas/images/01.png)
+
 ## Description
 This project implements a game named "Gorillas" in C++. It features a class `GorillaAI` that uses PID control for AI behavior within the game. The game likely involves strategic elements controlled by AI, making use of proportional, integral, and derivative controls to influence gameplay.
 
 ## Installation
+
+> **Note Warning:** This game requires a specific virtual environment.
+
 To install and run the Gorillas game:
 1. Ensure you have a C++ compiler installed on your system.
 2. Clone the repository to your local machine.
