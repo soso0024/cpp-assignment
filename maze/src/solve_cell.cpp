@@ -27,23 +27,15 @@ public:
 
         // TODO add free reachable positions from this point
 
-
-
-
-
-
-
         return generated;
     }
 };
 
-
-
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
     // load file
     std::string filename = Maze::mazeFile("maze.png");
-    if(argc == 2)
+    if (argc == 2)
         filename = std::string(argv[1]);
 
     // let Point know about this maze
@@ -59,5 +51,4 @@ int main( int argc, char **argv )
     // save final image
     Position::maze.saveSolution("cell");
     cv::waitKey(0);
-
 }
