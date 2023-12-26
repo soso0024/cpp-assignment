@@ -1,0 +1,3 @@
+/home/ecn/Desktop/gorillas/build/CMakeFiles/rebuild_cache.dir
+/home/ecn/Desktop/gorillas/build/CMakeFiles/edit_cache.dir
+/home/ecn/Desktop/gorillas/build/CMakeFiles/gorillas.dir
