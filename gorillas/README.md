@@ -3,8 +3,8 @@
 <!-- ![Gorillas Game Screenshot](https://github.com/soso0024/cpp-assignment/blob/main/gorillas/images/01.png) -->
 
 <p align="center">
-  <img src="https://github.com/soso0024/cpp-assignment/blob/main/gorillas/images/01.png" alt="gorillas image 01" width="400"/>
-  <img src="https://github.com/soso0024/cpp-assignment/blob/main/gorillas/images/02.png" alt="gorillas image 02" width="400"/>
+  <img src="https://github.com/soso0024/cpp-assignment/blob/main/gorillas/images/01.png" alt="gorillas image 01" width="450"/>
+  <img src="https://github.com/soso0024/cpp-assignment/blob/main/gorillas/images/02.png" alt="gorillas image 02" width="450"/>
 </p>
 
 
