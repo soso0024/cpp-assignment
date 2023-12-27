@@ -26,16 +26,28 @@ public:
         std::vector<Position> generated;
 
         // TODO add free reachable positions from this point
+        // Point(-1, 0) is LEFT, (1, 0) is RIGHT, (0, -1) is UP, (0, 1) is DOWN
+        std::vector<Point> directions = {Point(-1, 0), Point(1, 0), Point(0, -1), Point(0, 1)};
+
+        // For each direction
+        for(const auto &dir : directions){
+            Position next(x + dir.x, y + dir.y);
+
+            // Check if the new location is free in the maze
+            if(maze.isFree(next.x, next.y)){
+                generated.push_back(next);
+            }
+        }
 
         return generated;
     }
 };
 
-int main(int argc, char **argv)
+int main( int argc, char **argv )
 {
     // load file
     std::string filename = Maze::mazeFile("maze.png");
-    if (argc == 2)
+    if(argc == 2)
         filename = std::string(argv[1]);
 
     // let Point know about this maze
@@ -43,7 +55,7 @@ int main(int argc, char **argv)
 
     // initial and goal positions as Position's
     Position start = Position::maze.start(),
-             goal = Position::maze.end();
+            goal = Position::maze.end();
 
     // call A* algorithm
     ecn::Astar(start, goal);
@@ -51,4 +63,5 @@ int main(int argc, char **argv)
     // save final image
     Position::maze.saveSolution("cell");
     cv::waitKey(0);
+
 }
