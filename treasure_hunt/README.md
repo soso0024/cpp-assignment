@@ -1,5 +1,10 @@
 # Treasure Hunt Game
 
+<p align="center">
+  <img src="https://github.com/soso0024/cpp-assignment/blob/main/treasure_hunt/images/01.png" alt="treasure hunt image 01" width="450"/>
+  <img src="https://github.com/soso0024/cpp-assignment/blob/main/treasure_hunt/images/02.png" alt="treasure hunt image 02" width="450"/>
+</p>
+
 ## Overview
 Treasure Hunt is a 1 vs 1 video game developed by Clara Thomas and Luc Vignolles. It's a grid-based game where each player controls a boat with the goal of finding treasure while avoiding rocks. The unique aspect of this game is that players only know their Euclidean distance from the treasure, not its exact location.
 
