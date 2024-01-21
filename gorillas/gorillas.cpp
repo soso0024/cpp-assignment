@@ -28,15 +28,18 @@ public:
 
     // Calculate the error between the X coordinate of the opponent's gorilla and that of the thrown banana
     double horizontalError = feedback.opponent.x - feedback.banana.x;
+    double verticalError = feedback.opponent.y - feedback.banana.y;
 
     // Static variables for integral and differential terms
     static double integralTerm = 0.0;
-    static double previousError = 0.0;
+    static double hol_prevError = 0.0;
+    static double ver_prevError = 0.0;
 
     // Updating the integral term
-    integralTerm += horizontalError;
+    // integralTerm += horizontalError;
+    integralTerm = integralTerm + horizontalError + verticalError;
     // Calculation of Differential Terms
-    double derivativeTerm = horizontalError - previousError;
+    double derivativeTerm = (verticalError - ver_prevError) / (horizontalError - hol_prevError);
 
     // Calculate inputs for PID control
     double pidControl = K_p * horizontalError + K_i * integralTerm + K_d * derivativeTerm;
@@ -45,7 +48,8 @@ public:
     nextInput.vel += pidControl - feedback.wind;
 
     // Update previous error for differential term
-    previousError = horizontalError;
+    hol_prevError = horizontalError;
+    ver_prevError = verticalError;
 
     // Temporarily fixes the throwing angle
     nextInput.angle = ang;
@@ -58,7 +62,8 @@ int main(int argc, char **argv)
 {
   Game game(argc, argv, "So ONISHI", 3); // difficulty from 0 to 3
 
-  GorillaAI ai(0.15, 0.001, 0.01, 60); // proportionalGain, integralGain, derivativeGain, angle
+  // PID Tuning
+  GorillaAI ai(0.25, 0.001, 0.01, 60); // proportionalGain, integralGain, derivativeGain, angle
   Input input;
   Feedback feedback;
 
