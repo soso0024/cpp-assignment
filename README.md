@@ -2,7 +2,7 @@
 
 ## Gorillas
 
-## Maze Project
+## <a href="https://github.com/soso0024/cpp-assignment/tree/main/maze">Maze Project</a>
 
 <p align="center">
   <img src="https://github.com/soso0024/cpp-assignment/blob/main/maze/mazes/_cell.png" alt="maze image 01" width="450"/>
